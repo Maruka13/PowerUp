@@ -5,6 +5,7 @@
 # passo 5: repetir o passo 4 ate acabar a lista de produtos
 
 import pyautogui
+import time
 
 pyautogui.PAUSE = 0.5
 
@@ -16,4 +17,5 @@ pyautogui.press("enter")
 
 pyautogui.write(link)
 pyautogui.press("enter")
+time.sleep(3) # pausa especifica para esperar a pagina carregar
 
