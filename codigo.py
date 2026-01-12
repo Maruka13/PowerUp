@@ -6,6 +6,8 @@
 
 import pyautogui
 
+pyautogui.PAUSE = 0.5
+
 pyautogui.press("win")       # pyautogui.hotkey("command", "space") # macOS
 pyautogui.write("chrome")
 pyautogui.press("enter")
