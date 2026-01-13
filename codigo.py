@@ -35,28 +35,45 @@ import pandas
 
 tabela = pandas.read_csv("produtos.csv")
 
-pyautogui.click(x=671, y=258) # clicar em codigo do produto
+for linha in tabela.index: 
+    pyautogui.click(x=671, y=258) # clicar em codigo do produto
 
-pyautogui.write("MOLO000251")
-pyautogui.press("tab")
+    # codigo
+    codigo = tabela.loc[linha, "codigo"]
+    pyautogui.write("MOLO000251")
+    pyautogui.press("tab")
 
-pyautogui.write("Logitech")
-pyautogui.press("tab")
+    # marca
+    marca = tabela.loc[linha, "marca"]
+    pyautogui.write("Logitech")
+    pyautogui.press("tab")
 
-pyautogui.write("Mouse")
-pyautogui.press("tab")
+    # tipo
+    tipo = tabela.loc[linha, "tipo"]
+    pyautogui.write("Mouse")
+    pyautogui.press("tab")
 
-pyautogui.write("Categoria")
-pyautogui.press("tab")
+    # categoria
+    categoria = tabela.loc[linha, "categoria"]
+    pyautogui.write("Categoria")
+    pyautogui.press("tab")
 
-pyautogui.write("Preco")
-pyautogui.press("tab")
+    # preço
+    preco = tabela.loc[linha, "preco_unitario"]
+    pyautogui.write("Preco")
+    pyautogui.press("tab")
 
-pyautogui.write("Custo")
-pyautogui.press("tab")
+    # custo
+    custo = tabela.loc[linha, "custo"]
+    pyautogui.write("Custo")
+    pyautogui.press("tab")
 
-pyautogui.write("Obs")
-pyautogui.press("tab")
+    # observação
+    obs = tabela.loc[linha, "obs"]
+    pyautogui.write("Obs")
+    pyautogui.press("tab")
+    
+    pyautogui.press("enter")
 
-pyautogui.press("enter")
-
+    # volta pro inicio da tela p localização do mouse funcionar
+    pyautogui.scroll(5000)
