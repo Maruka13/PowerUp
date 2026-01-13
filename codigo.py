@@ -15,6 +15,8 @@ pyautogui.press("win")       # pyautogui.hotkey("command", "space") # macOS
 pyautogui.write("chrome")
 pyautogui.press("enter")
 
+time.sleep(3)
+
 pyautogui.write(link)
 pyautogui.press("enter")
 time.sleep(3) # pausa especifica para esperar a pagina carregar
