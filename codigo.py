@@ -21,3 +21,4 @@ pyautogui.write(link)
 pyautogui.press("enter")
 time.sleep(3) # pausa especifica para esperar a pagina carregar
 
+pyautogui.click(x=694, y=373) # posição do mouse na tela de login
