@@ -70,7 +70,8 @@ for linha in tabela.index:
 
     # observação
     obs = str(tabela.loc[linha, "obs"])
-    pyautogui.write(obs)
+    if obs != "nan":      # se minha observação for diferente de vazia
+        pyautogui.write(obs)
     pyautogui.press("tab")
     
     pyautogui.press("enter")
