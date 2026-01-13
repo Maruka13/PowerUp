@@ -28,3 +28,9 @@ pyautogui.write("senha deveras dificil")
 pyautogui.press("tab") # pula pro botao
 pyautogui.press("enter")
 time.sleep(5)
+
+# pip install pandas openpyxl
+
+import pandas
+
+tabela = pandas.read_csv("produtos.csv")
