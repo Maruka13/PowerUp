@@ -7,7 +7,7 @@
 import pyautogui
 import time
 
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 0.5 # pausa entre scripts
 
 link = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 
@@ -22,3 +22,9 @@ pyautogui.press("enter")
 time.sleep(3) # pausa especifica para esperar a pagina carregar
 
 pyautogui.click(x=694, y=373) # posição do mouse na tela de login
+pyautogui.write("manugomes@gmail.com")
+pyautogui.press("tab") # pula para senha
+pyautogui.write("senha deveras dificil")
+pyautogui.press("tab") # pula pro botao
+pyautogui.press("enter")
+time.sleep(5)
